@@ -1,6 +1,7 @@
 [Desktop Entry]
 Type=Application
 Name=Kiosk
-Exec=/home/mila/menudisplay_setup/scripts/kiosk.sh
+Exec=sh -c "sleep 15; DISPLAY=:0 XAUTHORITY=/home/mila/.Xauthority /home/mila/menudisplay_setup/scripts/kiosk.sh >> /home/mila/kiosk.log 2>&1"
 X-GNOME-Autostart-enabled=true
-
+Hidden=false
+NoDisplay=false
