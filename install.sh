@@ -9,7 +9,7 @@ echo "Updating system..."
 sudo apt update
 
 echo "Installing packages..."
-sudo apt install -y git xosd-bin curl wget openssh-client
+sudo apt install -y git xosd-bin curl wget openssh-client unclutter 
 
 # Chromium best-effort (different distros package it differently)
 if sudo apt install -y chromium-browser 2>/dev/null; then
