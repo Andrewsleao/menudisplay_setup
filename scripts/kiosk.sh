@@ -1,6 +1,24 @@
 #!/bin/bash
 
-URL="http://10.0.0.135/menu-burger.html"
+
+URL="http://10.0.0.135"
+
+HOST=$(hostname)
+
+case "$HOST" in
+  menu1)
+    URL="${URL}/menu-breakfast.html"
+    ;;
+  menu2)
+    URL="${URL}/menu-burger.html"
+    ;;
+  menu3)
+    URL="${URL}/menu-drinks.html"
+    ;;
+  *)
+    URL="${URL}/menu-burger.html"
+    ;;
+esac
 
 # Pick browser (prefer non-snap)
 if [ -x /usr/bin/chromium-browser ]; then
