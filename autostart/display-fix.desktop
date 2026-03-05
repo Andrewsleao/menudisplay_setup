@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
-Exec=sh -c "sleep 5; DISPLAY=:0 xset s off; DISPLAY=:0 xset -dpms; DISPLAY=:0 xset s noblank; DISPLAY=:0 xrandr --output HDMI-1 --mode 3840x2160 --rate 30 --primary"
+Name=Display Fix
+Exec=sh -c "sleep 8; DISPLAY=:0 XAUTHORITY=/home/mila/.Xauthority xset s off; DISPLAY=:0 XAUTHORITY=/home/mila/.Xauthority xset -dpms; DISPLAY=:0 XAUTHORITY=/home/mila/.Xauthority xset s noblank; DISPLAY=:0 XAUTHORITY=/home/mila/.Xauthority xrandr --output HDMI-1 --mode 3840x2160 --rate 30 --primary"
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true
-Name=Display Fix
