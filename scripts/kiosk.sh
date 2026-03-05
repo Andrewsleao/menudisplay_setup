@@ -13,7 +13,10 @@ case "$HOST" in
     URL="${URL}/menu-burger.html"
     ;;
   menu3)
-    URL="${URL}/menu-drinks.html"
+    URL="${URL}/menu-salgados.html"
+    ;;
+  menu4)
+    URL="${URL}/menu-sandwiches.html"
     ;;
   *)
     URL="${URL}/menu-burger.html"
