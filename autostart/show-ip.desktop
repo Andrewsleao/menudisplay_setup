@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Exec=/home/mila/show-ip.sh
+Exec=/home/mila/menu-config/show-ip.sh
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true
