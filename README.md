@@ -1,4 +1,6 @@
-Run this to create symlinks
-for f in ~/menu-config/autostart/*.desktop; do
-    ln -sf "$f" ~/.config/autostart/
-done
+# Menu Display Setup
+
+sudo apt update
+sudo apt install wget -y
+
+wget -qO- https://raw.githubusercontent.com/Andrewsleao/menudisplay_setup/main/install.sh | bash
