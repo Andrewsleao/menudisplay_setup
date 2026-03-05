@@ -49,7 +49,7 @@ if [ ! -d "$REPO_DIR/.git" ]; then
   echo "GitHub → https://github.com/settings/keys"
   echo "=================================================="
   echo
-  read -p "Press ENTER after the key has been added to GitHub..."
+  read -r -p "Press ENTER after the key has been added to GitHub..." </dev/tty
 fi
 
 echo "Starting ssh-agent..."
