@@ -3,7 +3,7 @@ set -e
 
 REPO_DIR="$HOME/menudisplay_setup"
 REPO_URL="git@github.com:Andrewsleao/menudisplay_setup.git"
-CRON_LINE='5 0 * * * cd /home/mila/menudisplay_setup && git fetch origin main && git reset --hard origin/main && reboot'
+CRON_LINE='5 0 * * * cd /home/mila/menudisplay_setup && git fetch origin main && git reset --hard origin/main ; reboot'
 
 echo "Updating system..."
 sudo apt update
