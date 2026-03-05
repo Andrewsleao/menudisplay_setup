@@ -35,5 +35,17 @@ for f in ~/menudisplay_setup/autostart/*.desktop; do
     ln -sf "$f" ~/.config/autostart/
 done
 
+echo "Disabling XFCE display popup on HDMI changes..."
+if command -v xfconf-query >/dev/null 2>&1; then
+  # Make sure the property exists and is the right type (int)
+  xfconf-query -c displays -p /Notify -n -t int -s 0 2>/dev/null || \
+  xfconf-query -c displays -p /Notify -s 0 2>/dev/null || true
+fi
+
+# Apply immediately if we're running inside a GUI session
+if [ -n "${DISPLAY:-}" ] && command -v xfce4-display-settings >/dev/null 2>&1; then
+  xfce4-display-settings --minimal >/dev/null 2>&1 &
+fi
+
 echo "Setup complete!"
 echo "Reboot to start kiosk mode."
