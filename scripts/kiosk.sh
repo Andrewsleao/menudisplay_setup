@@ -6,7 +6,7 @@ URL="http://10.0.0.135"
 HOST=$(hostname)
 
 case "$HOST" in
-  menu1)
+  menu)
     URL="${URL}/menu-breakfast.html"
     ;;
   menu2)
