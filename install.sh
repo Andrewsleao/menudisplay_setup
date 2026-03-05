@@ -57,7 +57,6 @@ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519 >/dev/null 2>&1 || true
 
 echo "Testing GitHub connection..."
-ssh -T git@github.com || true
 
 echo "Cloning repo..."
 if [ ! -d "$REPO_DIR/.git" ]; then
