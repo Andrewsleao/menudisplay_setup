@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
 Name=Kiosk
-Exec=/home/mila/menu-config/kiosk.sh
+Exec=/home/mila/menu-config/scripts/kiosk.sh
 X-GNOME-Autostart-enabled=true
 
