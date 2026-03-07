@@ -23,13 +23,15 @@ case "$HOST" in
     ;;
 esac
 
-# Pick browser (prefer non-snap)
-if [ -x /usr/bin/chromium-browser ]; then
-  BROWSER="/usr/bin/chromium-browser"
+# Pick browser
+if command -v google-chrome >/dev/null 2>&1; then
+  BROWSER="google-chrome"
+elif command -v google-chrome-stable >/dev/null 2>&1; then
+  BROWSER="google-chrome-stable"
 elif [ -x /snap/bin/chromium ]; then
   BROWSER="/snap/bin/chromium"
 else
-  echo "Chromium not found." >&2
+  echo "No supported browser found." >&2
   exit 1
 fi
 
