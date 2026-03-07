@@ -7,16 +7,19 @@ HOST=$(hostname)
 
 case "$HOST" in
   menu)
-    URL="${URL}/menu-breakfast.html"
+    URL="${URL}/menu-sandwiches.html"
     ;;
-  menu2)
+  mila-menu2)
     URL="${URL}/menu-burger.html"
     ;;
   menu3)
     URL="${URL}/menu-salgados.html"
     ;;
   menu4)
-    URL="${URL}/menu-sandwiches.html"
+    URL="${URL}/menu-breakfast.html"
+    ;;
+  menu-5)
+    URL="${URL}/menu-salgados.html"
     ;;
   *)
     URL="${URL}/menu-burger.html"
