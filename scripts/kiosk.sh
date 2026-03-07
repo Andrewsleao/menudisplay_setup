@@ -70,7 +70,6 @@ while true; do
     --disable-session-crashed-bubble \
     --disable-features=TranslateUI \
     --disable-restore-session-state \
-    --incognito \
     --overscroll-history-navigation=0 \
     --ozone-platform=x11 \
     --disable-gpu \
