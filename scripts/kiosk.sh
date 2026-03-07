@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-URL="http://10.0.0.135"
+URL="http://10.1.10.137"
 
 HOST=$(hostname)
 
