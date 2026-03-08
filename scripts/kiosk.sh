@@ -26,21 +26,13 @@ case "$HOST" in
     ;;
 esac
 
-# Pick browser
-if command -v exo-open >/dev/null 2>&1; then
-  BROWSER="exo-open --launch WebBrowser"
-elif command -v google-chrome-stable >/dev/null 2>&1; then
-  BROWSER="google-chrome-stable"
-elif command -v google-chrome >/dev/null 2>&1; then
-  BROWSER="google-chrome"
-elif command -v chromium >/dev/null 2>&1; then
-  BROWSER="chromium"
-elif command -v chromium-browser >/dev/null 2>&1 && chromium-browser --version >/dev/null 2>&1; then
-  BROWSER="chromium-browser"
+# Pick browser (prefer non-snap)
+if [ -x /usr/bin/chromium-browser ]; then
+  BROWSER="/usr/bin/chromium-browser"
 elif [ -x /snap/bin/chromium ]; then
   BROWSER="/snap/bin/chromium"
 else
-  echo "No supported browser found." >&2
+  echo "Chromium not found." >&2
   exit 1
 fi
 
@@ -79,6 +71,7 @@ while true; do
     --disable-session-crashed-bubble \
     --disable-features=TranslateUI \
     --disable-restore-session-state \
+    --incognito \
     --overscroll-history-navigation=0 \
     --ozone-platform=x11 \
     --disable-gpu \
